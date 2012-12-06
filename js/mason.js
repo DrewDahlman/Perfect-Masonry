@@ -6,14 +6,14 @@
 */
 
 (function(){
-	GRID = function(par,el,sel,sizes){
+	GRID = function(par,el,sel,ratio,sizes){
 		var self = this,ran,ranSize,h,w;
 
 		self.options = {
 			parent: $(par),
 			el: $(el),
 			sel: $(sel),
-			cols: 1,
+			ratio: ratio,
 			block: {
 				height: 0,
 				width: 0
@@ -39,7 +39,7 @@
 			self.options.parent.height(window.innerHeight);
 
 			// block size
-			self.options.block.height = (( window.innerWidth / self.cols() ) / 1.5).toFixed(0);
+			self.options.block.height = (( window.innerWidth / self.cols() ) / self.options.ratio).toFixed(0);
 			self.options.block.width = ( window.innerWidth / self.cols() );
 
 			self.size_boxes();
@@ -95,18 +95,20 @@
 				var c = Math.round($(this).position().left / self.options.block.width);
 				var r = Math.round($(this).position().top / self.options.block.height);
 				
-				if(size == 0){
-					matrix[r][c] = true;
-					matrix[r][c+1] = true;
-					matrix[r+1][c] = true;
-					matrix[r+1][c+1] = true;
-				}
-				else if(size == 1) {
-					matrix[r][c] = true;
-					matrix[r+1][c] = true;
-				}
-				else if(size == 2){
-					matrix[r][c] = true;
+
+				var h = self.sizes[size][1];
+				var w = self.sizes[size][0];
+				var a = h*w;
+				console.log(h)
+
+				for(var i = 0; i < a; i++){
+					for(var bh = 0; bh < h; bh++){
+						matrix[r+bh][c] = true;
+						for(var bw = 0; bw < w; bw++){
+							matrix[r+bh][c+bw] = true;
+						}
+					}
+					
 				}
 				
 			});
