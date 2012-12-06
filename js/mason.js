@@ -6,7 +6,7 @@
 */
 
 (function(){
-	GRID = function(par,el,sel,ratio,sizes){
+	MASON = function(par,el,sel,ratio,sizes){
 		var self = this,ran,ranSize,h,w;
 
 		self.options = {
@@ -94,7 +94,6 @@
 
 				var c = Math.round($(this).position().left / self.options.block.width);
 				var r = Math.round($(this).position().top / self.options.block.height);
-				
 
 				var h = self.sizes[size][1];
 				var w = self.sizes[size][0];

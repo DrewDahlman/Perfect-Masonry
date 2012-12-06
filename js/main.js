@@ -1,5 +1,5 @@
 $(function(){
-	var _GRID = new GRID(
+	var _GRID = new MASON(
 			'#grid',
 			'#gallery',
 			'.box',
