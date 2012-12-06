@@ -3,6 +3,8 @@ A way to detect missing gaps in a grid of elements and fill in those gaps to cre
 
 View <a href='http://drewdahlman.com/experiments/perfectMasonry/'>DEMO</a>
 
+<a href='http://www.drewdahlman.com/meusLabs/?p=218'>Read a blog post</a>
+
 ##Notes
 This project is inteded to illustrate how to accomplish this not to be used as a plugin.
 
