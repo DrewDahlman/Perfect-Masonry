@@ -99,7 +99,6 @@
 				var h = self.sizes[size][1];
 				var w = self.sizes[size][0];
 				var a = h*w;
-				console.log(h)
 
 				for(var i = 0; i < a; i++){
 					for(var bh = 0; bh < h; bh++){
@@ -118,6 +117,9 @@
 			for(var i = 0; i < matrix.length; i++){
 				for(var c = 0; c < matrix[i].length; c++){
 					if(matrix[i][c] == false){
+
+						var ran = Math.floor(Math.random()*self.sizes.length);
+						var ranSize = self.sizes[ran];
 
 						var h = self.options.block.height;
 						var w = self.options.block.width;
