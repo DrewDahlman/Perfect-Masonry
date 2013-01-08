@@ -1,4 +1,7 @@
 ##Perfect Masonry
+<strong>NOTE!</strong>
+Perfect-Masonry has been turned into a jQuery plugin and can be found here - <a href='https://github.com/DrewDahlman/Mason'>https://github.com/DrewDahlman/Mason</a>
+
 A way to detect missing gaps in a grid of elements and fill in those gaps to create a perfect fluid grid.
 
 View <a href='http://drewdahlman.com/experiments/perfectMasonry/'>DEMO</a>
